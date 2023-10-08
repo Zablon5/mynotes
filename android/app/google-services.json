@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1039087412201",
+    "project_id": "mynotes-zerihun",
+    "storage_bucket": "mynotes-zerihun.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039087412201:android:05d9e629b8805ccd12a178",
+        "android_client_info": {
+          "package_name": "com.zerihun.mynotes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZyjnxzFZLwG13n2b3PEu7opndpOZu4L8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
