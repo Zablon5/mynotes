@@ -10,11 +10,7 @@ import 'package:flutter/foundation.dart'
 /// ```dart
 /// import 'firebase_options.dart';
 /// // ...
-/// await Firebase.initializeApp(
-///   options: DefaultFirebaseOptions.currentPlatform,
-/// );
-/// ```
-class DefaultFirebaseOptions {
+/// await Firebase.initializeApp
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
       return web;
