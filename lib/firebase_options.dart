@@ -10,7 +10,11 @@ import 'package:flutter/foundation.dart'
 /// ```dart
 /// import 'firebase_options.dart';
 /// // ...
-/// await Firebase.initializeApp
+/// await Firebase.initializeApp(
+///   options: DefaultFirebaseOptions.currentPlatform,
+/// );
+/// ```
+class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
       return web;
@@ -21,10 +25,7 @@ import 'package:flutter/foundation.dart'
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -66,5 +67,14 @@ import 'package:flutter/foundation.dart'
     projectId: 'mynotes-zerihun',
     storageBucket: 'mynotes-zerihun.appspot.com',
     iosBundleId: 'com.zerihun.mynotes',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyCtPTDyHXGF0UlP42m5d78RsJReCbibjyE',
+    appId: '1:1039087412201:ios:a6e5807593d73b5412a178',
+    messagingSenderId: '1039087412201',
+    projectId: 'mynotes-zerihun',
+    storageBucket: 'mynotes-zerihun.appspot.com',
+    iosBundleId: 'com.zerihun.mynotes.RunnerTests',
   );
 }
