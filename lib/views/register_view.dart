@@ -2,6 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:mynotes/constants/routes.dart';
+// Remove the unused import directive
+// import 'package:mynotes/constants/routes.dart';
 import 'package:mynotes/firebase_options.dart';
 import 'package:mynotes/utilities/show_error_dialog.dart';
 
@@ -73,7 +75,8 @@ class _RegisterViewState extends State<RegisterView> {
                         );
                         final user = FirebaseAuth.instance.currentUser;
                         await user?.sendEmailVerification();
-                        Navigator.of(context).pushNamed(verifyEmailRoute);
+                        Navigator.of(context)
+                            .pushNamed(Routes.verifyEmailRoute);
                       } on FirebaseAuthException catch (e) {
                         final error = e.toString();
 
@@ -105,7 +108,7 @@ class _RegisterViewState extends State<RegisterView> {
                   TextButton(
                       onPressed: () {
                         Navigator.of(context).pushNamedAndRemoveUntil(
-                            loginRoute, (route) => false);
+                            Routes.loginRoute, (route) => false);
                       },
                       child: const Text("Already registered? Login here!"))
                 ],
