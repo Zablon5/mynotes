@@ -38,7 +38,10 @@ class FirebaseAuthProvider implements auth_provider.AuthProvider {
     } catch (_) {
       GenericAuthException();
     }
-    return const AuthUser(isEmailVerified: false);
+    return const AuthUser(
+      email: '',
+      isEmailVerified: false,
+    );
   }
 
   @override
