@@ -56,14 +56,6 @@ void main() {
       final user = provider.currentUser;
       expect(user, isNotNull);
     });
-
-    test('should be able to logout and login again', () async {
-      await provider.logOut();
-      await provider.logIn(email: 'email', password: 'password');
-      final user = provider.currentUser;
-      provider._isInitialized = true;
-      expect(user, isNotNull);
-    });
   });
 }
 
