@@ -1,7 +1,6 @@
-class Routes {
-  static const loginRoute = 'login';
-  static const registerRoute = '/register';
-  static const notesRoute = '/notes';
-  static const homeRoute = '/';
-  static const verifyEmailRoute = '/verify-email';
-}
+const loginRoute = 'login';
+const registerRoute = '/register';
+const notesRoute = '/notes';
+const homeRoute = '/';
+const verifyEmailRoute = '/verify-email';
+const newNotesRoute = '/notes/new-note/';

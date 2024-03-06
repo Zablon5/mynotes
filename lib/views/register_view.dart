@@ -69,8 +69,7 @@ class _RegisterViewState extends State<RegisterView> {
                         );
 
                         AuthService.firebase().sendEmailVerification();
-                        Navigator.of(context)
-                            .pushNamed(Routes.verifyEmailRoute);
+                        Navigator.of(context).pushNamed(verifyEmailRoute);
                       } on WeakPasswordAuthException {
                         await showErrorDialog(
                           context,
@@ -98,7 +97,7 @@ class _RegisterViewState extends State<RegisterView> {
                   TextButton(
                       onPressed: () {
                         Navigator.of(context).pushNamedAndRemoveUntil(
-                            Routes.loginRoute, (route) => false);
+                            loginRoute, (route) => false);
                       },
                       child: const Text("Already registered? Login here!"))
                 ],
